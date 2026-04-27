@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=6 format=3 uid="uid://bppfbmioagco0"]
+[gd_resource type="Theme" format=3 uid="uid://bppfbmioagco0"]
 
 [ext_resource type="FontFile" uid="uid://b7dmogiwpayxm" path="res://Fonts/yoster.ttf" id="1_2rutl"]
 [ext_resource type="StyleBox" uid="uid://rsltytampmw4" path="res://Scenes/BTL/UI/BTL_panelfull.tres" id="1_7nhqn"]

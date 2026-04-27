@@ -1,13 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://db46av4jrq2v4"]
+[gd_scene format=3 uid="uid://db46av4jrq2v4"]
 
 [ext_resource type="Texture2D" uid="uid://icff0cpfpqpr" path="res://Assets/MENU/ohhh.png" id="1_fcwyn"]
 [ext_resource type="PackedScene" uid="uid://vu3cn0dhrrvb" path="res://Scenes/menu/buttons_menu.tscn" id="1_v5dlt"]
 
-[node name="Menu" type="Node"]
+[node name="Menu" type="Node" unique_id=2075272725]
 
-[node name="SplashPh" type="Sprite2D" parent="."]
+[node name="SplashPh" type="Sprite2D" parent="." unique_id=1546029186]
 texture = ExtResource("1_fcwyn")
 centered = false
 
-[node name="ButtonsMenu" parent="." instance=ExtResource("1_v5dlt")]
+[node name="ButtonsMenu" parent="." unique_id=1458656623 instance=ExtResource("1_v5dlt")]
 mouse_filter = 2
