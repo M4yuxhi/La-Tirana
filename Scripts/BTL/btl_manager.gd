@@ -613,6 +613,28 @@ func do_attack_action(actor_name: String, action: Dictionary) -> void:
 	# Elegir front/back manualmente
 	var node_front = get_node_or_null("Enemies/EnemyContainersFront/" + action.target)
 	var node_back  = get_node_or_null("Enemies/EnemyContainersBack/"  + action.target)
+	
+	var node_enemies = get_node_or_null("Enemies")
+	
+	print("Obtaining children")
+	
+	print("Node back")
+	
+	for child in node_back.get_children():
+		print(child.name)
+	
+	print("Node front")
+	
+	for child in node_front.get_children():
+		print(child.name)
+	
+	print("Enemies")
+	
+	for child in node_enemies.get_children():
+		print(child.name)
+	
+	print("Children obtained")
+	
 	var node = node_front
 	if node == null:
 		node = node_back

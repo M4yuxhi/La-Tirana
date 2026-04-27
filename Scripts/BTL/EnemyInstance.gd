@@ -45,7 +45,6 @@ func recibir_dano(amount: int):
 		emit_signal("died",self)
 		rip=true
 
-
 func agregar_estado(estado: String):
 	if estado in estados:
 		return
