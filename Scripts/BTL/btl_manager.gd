@@ -139,6 +139,10 @@ func _ready() -> void:
 	
 	
 
+func _process(delta: float) -> void:
+	if Input.is_key_pressed(KEY_X):
+		print("Current State: " + str(current_state))
+
 #-------------FSM LOGICA AQUI----------------
 
 func _change_state(new_state: BattleState) -> void:
@@ -615,25 +619,6 @@ func do_attack_action(actor_name: String, action: Dictionary) -> void:
 	var node_back  = get_node_or_null("Enemies/EnemyContainersBack/"  + action.target)
 	
 	var node_enemies = get_node_or_null("Enemies")
-	
-	print("Obtaining children")
-	
-	print("Node back")
-	
-	for child in node_back.get_children():
-		print(child.name)
-	
-	print("Node front")
-	
-	for child in node_front.get_children():
-		print(child.name)
-	
-	print("Enemies")
-	
-	for child in node_enemies.get_children():
-		print(child.name)
-	
-	print("Children obtained")
 	
 	var node = node_front
 	if node == null:
