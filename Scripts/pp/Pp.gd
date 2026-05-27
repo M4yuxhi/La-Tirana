@@ -4,7 +4,6 @@ enum State { IDLE, MOVE, JUMP, BUSY }
 var state = State.JUMP
 
 var velocidad_mov = 4.0
-var factor_correr = 1.5
 var JUMP_VELOCITY = 2.5
 var GRAVITY = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -89,11 +88,6 @@ func _physics_process(delta):
 	update_animation(delta)
 	
 
-func assign_velocity() -> float:
-	var input_run = Input.is_key_pressed(KEY_SHIFT)
-	var assigned_velocity = velocidad_mov * factor_correr if input_run else velocidad_mov
-	return assigned_velocity
-
 func handle_idle_state():
 	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	if input_dir != Vector2.ZERO:
@@ -118,10 +112,8 @@ func handle_move_state():
 	
 	dir= rotation_nueva * dir
 	
-	var assigned_velocity = assign_velocity()
-	
-	velocity.x = dir.x * assigned_velocity
-	velocity.z = dir.z * assigned_velocity
+	velocity.x = dir.x * velocidad_mov
+	velocity.z = dir.z * velocidad_mov
 	move_and_slide()
 
 func handle_jump_state():

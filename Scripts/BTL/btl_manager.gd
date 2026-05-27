@@ -139,10 +139,6 @@ func _ready() -> void:
 	
 	
 
-func _process(delta: float) -> void:
-	if Input.is_key_pressed(KEY_X):
-		print("Current State: " + str(current_state))
-
 #-------------FSM LOGICA AQUI----------------
 
 func _change_state(new_state: BattleState) -> void:
@@ -617,9 +613,6 @@ func do_attack_action(actor_name: String, action: Dictionary) -> void:
 	# Elegir front/back manualmente
 	var node_front = get_node_or_null("Enemies/EnemyContainersFront/" + action.target)
 	var node_back  = get_node_or_null("Enemies/EnemyContainersBack/"  + action.target)
-	
-	var node_enemies = get_node_or_null("Enemies")
-	
 	var node = node_front
 	if node == null:
 		node = node_back

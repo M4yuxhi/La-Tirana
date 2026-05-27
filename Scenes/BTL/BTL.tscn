@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://lnacxbw1eicg"]
+[gd_scene load_steps=16 format=3 uid="uid://lnacxbw1eicg"]
 
 [ext_resource type="Script" uid="uid://dba53fa8uw5ef" path="res://Scripts/BTL/btl_manager.gd" id="1_xsev4"]
 [ext_resource type="PackedScene" uid="uid://dohlqsxt82612" path="res://Scenes/BTL/Enemies/enemy_container_base.tscn" id="2_idkhm"]
@@ -35,7 +35,7 @@ corner_radius_top_right = 75
 corner_radius_bottom_right = 75
 corner_radius_bottom_left = 75
 
-[node name="BTL" type="Control" unique_id=1824454717]
+[node name="BTL" type="Control"]
 process_mode = 1
 z_index = 1
 layout_mode = 3
@@ -45,12 +45,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="BTL_Manager" type="Node" parent="." unique_id=1155196430]
+[node name="BTL_Manager" type="Node" parent="."]
 script = ExtResource("1_xsev4")
 Enemy = ExtResource("2_idkhm")
 Ally = ExtResource("3_muaw0")
 
-[node name="Background" type="TextureRect" parent="BTL_Manager" unique_id=917324312]
+[node name="Background" type="TextureRect" parent="BTL_Manager"]
 texture_filter = 1
 material = SubResource("ShaderMaterial_wbnk0")
 anchors_preset = 15
@@ -60,7 +60,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("5_muaw0")
 
-[node name="DarkOverlay" type="ColorRect" parent="BTL_Manager" unique_id=1730099296]
+[node name="DarkOverlay" type="ColorRect" parent="BTL_Manager"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -68,7 +68,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.0588235)
 
-[node name="Enemies" type="Control" parent="BTL_Manager" unique_id=47801771]
+[node name="Enemies" type="Control" parent="BTL_Manager"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -76,7 +76,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="EnemyContainersBack" type="HBoxContainer" parent="BTL_Manager/Enemies" unique_id=1494207377]
+[node name="EnemyContainersBack" type="HBoxContainer" parent="BTL_Manager/Enemies"]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 5
@@ -88,7 +88,7 @@ offset_bottom = 526.0
 grow_horizontal = 2
 theme_override_constants/separation = -470
 
-[node name="EnemyContainersFront" type="HBoxContainer" parent="BTL_Manager/Enemies" unique_id=632321740]
+[node name="EnemyContainersFront" type="HBoxContainer" parent="BTL_Manager/Enemies"]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -104,7 +104,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 150
 
-[node name="ColorRect" type="ColorRect" parent="BTL_Manager" unique_id=1990398848]
+[node name="ColorRect" type="ColorRect" parent="BTL_Manager"]
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
@@ -117,7 +117,7 @@ grow_horizontal = 2
 grow_vertical = 0
 color = Color(0, 0, 0, 0.737255)
 
-[node name="Party" type="Control" parent="BTL_Manager" unique_id=11247425]
+[node name="Party" type="Control" parent="BTL_Manager"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -125,7 +125,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="AllyContainers" type="HBoxContainer" parent="BTL_Manager/Party" unique_id=730464145]
+[node name="AllyContainers" type="HBoxContainer" parent="BTL_Manager/Party"]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 2
@@ -138,9 +138,9 @@ offset_bottom = -25.0
 grow_vertical = 0
 theme_override_constants/separation = 25
 
-[node name="UI" type="Node" parent="BTL_Manager" unique_id=875804643]
+[node name="UI" type="Node" parent="BTL_Manager"]
 
-[node name="CommandPanel" type="PanelContainer" parent="BTL_Manager/UI" unique_id=1484680275]
+[node name="CommandPanel" type="PanelContainer" parent="BTL_Manager/UI"]
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -155,11 +155,11 @@ grow_vertical = 0
 theme = ExtResource("6_104bg")
 theme_override_styles/panel = ExtResource("7_7jexa")
 
-[node name="CommandContainer" type="GridContainer" parent="BTL_Manager/UI/CommandPanel" unique_id=633775283]
+[node name="CommandContainer" type="GridContainer" parent="BTL_Manager/UI/CommandPanel"]
 layout_mode = 2
 columns = 2
 
-[node name="Atacar" type="Button" parent="BTL_Manager/UI/CommandPanel/CommandContainer" unique_id=763284974]
+[node name="Atacar" type="Button" parent="BTL_Manager/UI/CommandPanel/CommandContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_pressed_color = Color(1, 1, 0, 1)
@@ -169,7 +169,7 @@ text = "Atacar"
 flat = true
 icon_alignment = 1
 
-[node name="Habilidades" type="Button" parent="BTL_Manager/UI/CommandPanel/CommandContainer" unique_id=1660231518]
+[node name="Habilidades" type="Button" parent="BTL_Manager/UI/CommandPanel/CommandContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -179,7 +179,7 @@ theme_override_styles/focus = ExtResource("4_muaw0")
 text = "Habilidades"
 flat = true
 
-[node name="Objetos" type="Button" parent="BTL_Manager/UI/CommandPanel/CommandContainer" unique_id=1386567294]
+[node name="Objetos" type="Button" parent="BTL_Manager/UI/CommandPanel/CommandContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -189,7 +189,7 @@ theme_override_styles/focus = ExtResource("4_muaw0")
 text = "Objetos"
 flat = true
 
-[node name="Escapar" type="Button" parent="BTL_Manager/UI/CommandPanel/CommandContainer" unique_id=1049006032]
+[node name="Escapar" type="Button" parent="BTL_Manager/UI/CommandPanel/CommandContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -199,7 +199,7 @@ theme_override_styles/focus = ExtResource("4_muaw0")
 text = "Escapar"
 flat = true
 
-[node name="ItemPanel" type="PanelContainer" parent="BTL_Manager/UI" unique_id=118568485]
+[node name="ItemPanel" type="PanelContainer" parent="BTL_Manager/UI"]
 visible = false
 custom_minimum_size = Vector2(650, 325)
 anchors_preset = 3
@@ -216,41 +216,41 @@ grow_vertical = 0
 theme = ExtResource("6_104bg")
 theme_override_styles/panel = ExtResource("7_7jexa")
 
-[node name="MarginContainer" type="MarginContainer" parent="BTL_Manager/UI/ItemPanel" unique_id=2079371069]
+[node name="MarginContainer" type="MarginContainer" parent="BTL_Manager/UI/ItemPanel"]
 custom_minimum_size = Vector2(0, 295)
 layout_mode = 2
 
-[node name="ItemListContainer" type="VBoxContainer" parent="BTL_Manager/UI/ItemPanel" unique_id=740302895]
+[node name="ItemListContainer" type="VBoxContainer" parent="BTL_Manager/UI/ItemPanel"]
 custom_minimum_size = Vector2(0, 295)
 layout_mode = 2
 theme = ExtResource("8_7jexa")
 theme_override_constants/separation = 5
 alignment = 1
 
-[node name="Label" type="Label" parent="BTL_Manager/UI/ItemPanel/ItemListContainer" unique_id=1738378248]
+[node name="Label" type="Label" parent="BTL_Manager/UI/ItemPanel/ItemListContainer"]
 layout_mode = 2
 text = "Selecciona Objeto"
 horizontal_alignment = 1
 
-[node name="ItemScroll" type="ScrollContainer" parent="BTL_Manager/UI/ItemPanel/ItemListContainer" unique_id=642743260]
+[node name="ItemScroll" type="ScrollContainer" parent="BTL_Manager/UI/ItemPanel/ItemListContainer"]
 custom_minimum_size = Vector2(0, 205)
 layout_mode = 2
 follow_focus = true
 vertical_scroll_mode = 3
 
-[node name="ItemButtons" type="VBoxContainer" parent="BTL_Manager/UI/ItemPanel/ItemListContainer/ItemScroll" unique_id=1618474506]
+[node name="ItemButtons" type="VBoxContainer" parent="BTL_Manager/UI/ItemPanel/ItemListContainer/ItemScroll"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="CancelButton" type="Button" parent="BTL_Manager/UI/ItemPanel/ItemListContainer" unique_id=754409636]
+[node name="CancelButton" type="Button" parent="BTL_Manager/UI/ItemPanel/ItemListContainer"]
 layout_mode = 2
 theme_override_constants/outline_size = 50
 theme_override_styles/focus = ExtResource("4_muaw0")
 text = "Cancelar"
 flat = true
 
-[node name="SkillPanel" type="PanelContainer" parent="BTL_Manager/UI" unique_id=446139691]
+[node name="SkillPanel" type="PanelContainer" parent="BTL_Manager/UI"]
 visible = false
 custom_minimum_size = Vector2(650, 325)
 anchors_preset = 3
@@ -267,41 +267,41 @@ grow_vertical = 0
 theme = ExtResource("6_104bg")
 theme_override_styles/panel = ExtResource("7_7jexa")
 
-[node name="MarginContainer" type="MarginContainer" parent="BTL_Manager/UI/SkillPanel" unique_id=1658822439]
+[node name="MarginContainer" type="MarginContainer" parent="BTL_Manager/UI/SkillPanel"]
 custom_minimum_size = Vector2(0, 295)
 layout_mode = 2
 
-[node name="SkillListContainer" type="VBoxContainer" parent="BTL_Manager/UI/SkillPanel" unique_id=1725644811]
+[node name="SkillListContainer" type="VBoxContainer" parent="BTL_Manager/UI/SkillPanel"]
 custom_minimum_size = Vector2(0, 295)
 layout_mode = 2
 theme = ExtResource("8_7jexa")
 theme_override_constants/separation = 5
 alignment = 1
 
-[node name="Label" type="Label" parent="BTL_Manager/UI/SkillPanel/SkillListContainer" unique_id=2107284740]
+[node name="Label" type="Label" parent="BTL_Manager/UI/SkillPanel/SkillListContainer"]
 layout_mode = 2
 text = "Selecciona Habilidad"
 horizontal_alignment = 1
 
-[node name="SkillScroll" type="ScrollContainer" parent="BTL_Manager/UI/SkillPanel/SkillListContainer" unique_id=1903394704]
+[node name="SkillScroll" type="ScrollContainer" parent="BTL_Manager/UI/SkillPanel/SkillListContainer"]
 custom_minimum_size = Vector2(0, 205)
 layout_mode = 2
 follow_focus = true
 vertical_scroll_mode = 3
 
-[node name="SkillButtons" type="VBoxContainer" parent="BTL_Manager/UI/SkillPanel/SkillListContainer/SkillScroll" unique_id=491021309]
+[node name="SkillButtons" type="VBoxContainer" parent="BTL_Manager/UI/SkillPanel/SkillListContainer/SkillScroll"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="CancelButton" type="Button" parent="BTL_Manager/UI/SkillPanel/SkillListContainer" unique_id=2049003218]
+[node name="CancelButton" type="Button" parent="BTL_Manager/UI/SkillPanel/SkillListContainer"]
 layout_mode = 2
 theme_override_constants/outline_size = 50
 theme_override_styles/focus = ExtResource("4_muaw0")
 text = "Cancelar"
 flat = true
 
-[node name="ItemDesPanel" type="PanelContainer" parent="BTL_Manager/UI" unique_id=978377277]
+[node name="ItemDesPanel" type="PanelContainer" parent="BTL_Manager/UI"]
 visible = false
 custom_minimum_size = Vector2(650, 160)
 anchors_preset = 3
@@ -319,21 +319,21 @@ size_flags_horizontal = 0
 theme = SubResource("Theme_imjbc")
 theme_override_styles/panel = ExtResource("7_7jexa")
 
-[node name="MarginContainer" type="MarginContainer" parent="BTL_Manager/UI/ItemDesPanel" unique_id=1457226102]
+[node name="MarginContainer" type="MarginContainer" parent="BTL_Manager/UI/ItemDesPanel"]
 layout_mode = 2
 theme_override_constants/margin_left = 40
 theme_override_constants/margin_top = 40
 theme_override_constants/margin_right = 40
 theme_override_constants/margin_bottom = 40
 
-[node name="ItemDesLabel" type="Label" parent="BTL_Manager/UI/ItemDesPanel/MarginContainer" unique_id=1124197120]
+[node name="ItemDesLabel" type="Label" parent="BTL_Manager/UI/ItemDesPanel/MarginContainer"]
 custom_minimum_size = Vector2(540, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
 autowrap_mode = 2
 
-[node name="CombatMsgPanel" type="PanelContainer" parent="BTL_Manager/UI" unique_id=1334587867]
+[node name="CombatMsgPanel" type="PanelContainer" parent="BTL_Manager/UI"]
 visible = false
 custom_minimum_size = Vector2(650, 160)
 anchors_preset = 3
@@ -351,21 +351,21 @@ size_flags_horizontal = 0
 theme = ExtResource("6_104bg")
 theme_override_styles/panel = ExtResource("7_7jexa")
 
-[node name="MarginContainer" type="MarginContainer" parent="BTL_Manager/UI/CombatMsgPanel" unique_id=866231114]
+[node name="MarginContainer" type="MarginContainer" parent="BTL_Manager/UI/CombatMsgPanel"]
 layout_mode = 2
 theme_override_constants/margin_left = 40
 theme_override_constants/margin_top = 40
 theme_override_constants/margin_right = 40
 theme_override_constants/margin_bottom = 40
 
-[node name="CombatMsgLabel" type="Label" parent="BTL_Manager/UI/CombatMsgPanel/MarginContainer" unique_id=2011497139]
+[node name="CombatMsgLabel" type="Label" parent="BTL_Manager/UI/CombatMsgPanel/MarginContainer"]
 custom_minimum_size = Vector2(540, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
 autowrap_mode = 2
 
-[node name="SkillPanelDisplay" type="PanelContainer" parent="BTL_Manager/UI" unique_id=877739759]
+[node name="SkillPanelDisplay" type="PanelContainer" parent="BTL_Manager/UI"]
 offset_left = 40.0
 offset_top = 40.0
 offset_right = 116.0
@@ -374,23 +374,23 @@ scale = Vector2(2.5, 2.5)
 theme = ExtResource("6_104bg")
 theme_override_styles/panel = SubResource("StyleBoxFlat_81ypj")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="BTL_Manager/UI/SkillPanelDisplay" unique_id=27517743]
+[node name="HBoxContainer" type="HBoxContainer" parent="BTL_Manager/UI/SkillPanelDisplay"]
 layout_mode = 2
 theme_override_constants/separation = -8
 
-[node name="SkillIcon" type="TextureRect" parent="BTL_Manager/UI/SkillPanelDisplay/HBoxContainer" unique_id=740111104]
+[node name="SkillIcon" type="TextureRect" parent="BTL_Manager/UI/SkillPanelDisplay/HBoxContainer"]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("10_hvcdh")
 expand_mode = 3
 
-[node name="SkillPoolLabel" type="Label" parent="BTL_Manager/UI/SkillPanelDisplay/HBoxContainer" unique_id=981240774]
+[node name="SkillPoolLabel" type="Label" parent="BTL_Manager/UI/SkillPanelDisplay/HBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
 
-[node name="Audio" type="Node" parent="BTL_Manager" unique_id=1235783946]
+[node name="Audio" type="Node" parent="BTL_Manager"]
 
-[node name="BTL_Fx" type="AudioStreamPlayer" parent="BTL_Manager/Audio" unique_id=714944435]
+[node name="BTL_Fx" type="AudioStreamPlayer" parent="BTL_Manager/Audio"]
 stream = ExtResource("12_1ira7")
 volume_db = -18.0
 mix_target = 2
